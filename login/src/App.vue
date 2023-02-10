@@ -8,7 +8,7 @@
 export default{
   created(){
       if(false){
-        console.log("AUTH reroute HOME")
+        console.log("AUTH reroute HOME test")
         this.$router.push("/");
       }
       else{
