@@ -20,7 +20,12 @@ const routes = [
     path:'/login',
     name:'login',
     component: ()=> import('../views/Login')
-  }
+  },
+  {
+    path:'/register',
+    name:'register',
+    component: ()=> import('../views/Register')
+  },
 ]
 
 const router = createRouter({

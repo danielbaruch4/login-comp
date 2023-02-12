@@ -1,33 +1,38 @@
 <template>
-    <div class="login-wrapper">
-    <!-- <v-card  color="grey-lighten-3">
+    <div class="login-page">
+
+        <div class="login-wrapper">
+            <!-- <v-card  color="grey-lighten-3">
         <p>sda</p>
         <p>sda</p>
         <p>sda</p>
-    </v-card>     -->
+        </v-card>     -->
     
-        <div class="login-card">
-                <v-sheet style="margin-top: 20px; padding-top: 20px;" class="sm-10">
+            <div class="login-card">
+                <v-sheet style="margin-top: 20px; padding-top: 20px; background-color: brown;" class="sm-10">
                     <v-form @submit.prevent="submit">
                         <v-text-field
-                        class="mx-10"
-                        density="comfortable"
+                            class="mx-10"
+                            density="comfortable"
                             v-model="userName"
                             :rules="rules"
                             label="Username"
                         ></v-text-field>
                         <v-text-field
-                        class="mx-10"
-                        density="comfortable"
+                            class="mx-10"
+                            density="comfortable"
                             v-model="Password"
                             :rules="rules"
                             label="Password"
                         ></v-text-field>
-                    <v-btn  :disabled='disableSubmit'  type=submit class="mx-10">Submit</v-btn>
-                    </v-form>
+                        <v-btn  :disabled='disableSubmit'  type=submit class="mx-10">Submit</v-btn>
+                        <a class="mx-10" :style="{display:'inline-block', paddingTop:'10px'}" href="">not registered yet? signup here</a>
+                </v-form>
                 </v-sheet>
             </div>
+
         </div>
+    </div>
 </template>
 <script lang="ts">
   export default {
@@ -39,7 +44,7 @@
             (value: any) => {
             if (value) return true
             return ''
-            },
+        },
         ],
     }),
     methods:{
@@ -61,6 +66,7 @@
   height: 50%;
   /* whatever width you want */
   display: inline-block;
+  background-color: aqua !important;
 }
 .login-wrapper:after {
   /* padding-top: 56.25%; */
@@ -80,6 +86,9 @@
 }
 .login-card{
 background-color: rgb(253, 253, 253);
+background-color: brown;
+height: 100%;
+height: 100%;
  position: absolute;
   top: 0;
   bottom: 0;
@@ -89,5 +98,8 @@ background-color: rgb(253, 253, 253);
   /* background-color: deepskyblue; */
   /* let's see it! */
   color: white;
+}
+.login-page{
+    
 }
 </style>
