@@ -35,6 +35,7 @@
     </div>
 </template>
 <script lang="ts">
+import axios from 'axios'
   export default {
     data: () => ({
         disableSubmit:false,
@@ -48,7 +49,11 @@
         ],
     }),
     methods:{
-        submit() {
+        async submit() {
+            await axios.get("http://127.0.0.1:5000")
+            .then(res => {
+                console.log(res)
+            })
             console.log("danie")
             this.disableSubmit=true
             if(true){
