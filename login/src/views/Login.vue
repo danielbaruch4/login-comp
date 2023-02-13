@@ -2,14 +2,9 @@
     <div class="login-page">
 
         <div class="login-wrapper">
-            <!-- <v-card  color="grey-lighten-3">
-        <p>sda</p>
-        <p>sda</p>
-        <p>sda</p>
-        </v-card>     -->
-    
             <div class="login-card">
-                <v-sheet style="margin-top: 20px; padding-top: 20px; background-color: brown;" class="sm-10">
+                <h1 class="card-title">Login</h1>
+                <v-sheet style="margin-top: 10px;  background-color: white;" class="mx-10">
                     <v-form @submit.prevent="submit">
                         <v-text-field
                             class="mx-10"
@@ -30,7 +25,6 @@
                 </v-form>
                 </v-sheet>
             </div>
-
         </div>
     </div>
 </template>
@@ -68,7 +62,7 @@ import axios from 'axios'
 <style>
 .login-wrapper {
   width: 90%;
-  height: 50%;
+  height: 30%;
   /* whatever width you want */
   display: inline-block;
   background-color: aqua !important;
@@ -91,7 +85,7 @@ import axios from 'axios'
 }
 .login-card{
 background-color: rgb(253, 253, 253);
-background-color: brown;
+background-color: white;
 height: 100%;
 height: 100%;
  position: absolute;
@@ -102,9 +96,15 @@ height: 100%;
   /* fill parent */
   /* background-color: deepskyblue; */
   /* let's see it! */
-  color: white;
+  color: black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .login-page{
     
+}
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>
